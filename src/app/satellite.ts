@@ -1,3 +1,5 @@
+import { of } from "rxjs";
+
 export class Satellite {
 
 	name: string;
@@ -15,7 +17,11 @@ export class Satellite {
    }
 	
 	isSpaceDebris(): boolean {
+		if(this.type === "Space Debris") {
 		return true;
+		} else
+		return false;
+		
    }
 
 }
